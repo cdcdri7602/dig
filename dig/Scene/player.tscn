@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bnqev2dim7u1l"]
+
+[ext_resource type="Script" uid="uid://dxm1uaisvhjwq" path="res://Script/player.gd" id="1_ivevv"]
+[ext_resource type="Texture2D" uid="uid://bduvihkkeqymf" path="res://img/idle1.png" id="2_xa75v"]
+[ext_resource type="Texture2D" uid="uid://be4x4gdhe7d7t" path="res://img/idle2.png" id="3_58ae2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b26j0"]
+radius = 5.0
+height = 22.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivevv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xa75v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_58ae2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="Player" type="Area2D" unique_id=38050948]
+scale = Vector2(3, 3)
+script = ExtResource("1_ivevv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=713495238]
+shape = SubResource("CapsuleShape2D_b26j0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=483240921]
+sprite_frames = SubResource("SpriteFrames_ivevv")
+animation = &"idle"
+autoplay = "idle"

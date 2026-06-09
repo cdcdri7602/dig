@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://3men3wu6qfit"]
+
+[node name="Line2D" type="Line2D" unique_id=944909006]
+width = 3.0

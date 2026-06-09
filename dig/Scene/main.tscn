@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bg12dtvm372ne"]
+
+[ext_resource type="Script" uid="uid://ce2jhjeget4pp" path="res://Script/start.gd" id="1_f6udf"]
+[ext_resource type="Texture2D" uid="uid://byorsfw2af085" path="res://assets/orig.png" id="2_sblpm"]
+[ext_resource type="AudioStream" uid="uid://cbw2cps5k8i23" path="res://assets/music/xDeviruchi - And The Journey Begins .wav" id="3_r34rm"]
+[ext_resource type="Texture2D" uid="uid://2cpx6flrkfvr" path="res://logo.png" id="4_2wwxx"]
+
+[node name="Node2D" type="Node2D" unique_id=1650317651]
+script = ExtResource("1_f6udf")
+
+[node name="Control" type="Control" parent="." unique_id=501489295]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1277.0
+offset_bottom = 719.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1497516462]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sblpm")
+
+[node name="Button" type="Button" parent="Control" unique_id=1745779138]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 534.0
+offset_right = 770.0
+offset_bottom = 630.0
+text = "시작
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=832678680]
+stream = ExtResource("3_r34rm")
+volume_db = -26.917
+autoplay = true
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=1347669062]
+position = Vector2(650.00006, 354.00003)
+scale = Vector2(1.0961539, 1.0961539)
+texture = ExtResource("4_2wwxx")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

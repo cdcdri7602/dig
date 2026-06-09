@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://bry2gagihjsls"]
+
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_32tt7"]
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="2_fmtir"]
+
+[resource]
+script = ExtResource("2_fmtir")
+id = "building_2"
+title = "신석기관 개관"
+description = "발굴해서 얻은 유물로 신석기관을 개방합니다 (신석기 유물을 요구합니다)"
+icon = ExtResource("1_32tt7")
+cost = 20000
+old_log = 50
+stage_2 = true
+prerequisites = Array[String](["building_1"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

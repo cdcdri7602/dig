@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://qlxwa3x3hhtw"]
+
+[ext_resource type="Script" uid="uid://begh1u4rft2mh" path="res://Script/panel.gd" id="2_abxgm"]
+
+[node name="Tooltip" type="CanvasLayer" unique_id=1839333209]
+
+[node name="Panel" type="Panel" parent="." unique_id=294426503]
+offset_right = 223.0
+offset_bottom = 334.5
+script = ExtResource("2_abxgm")
+
+[node name="title" type="Label" parent="Panel" unique_id=1679878899]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 21
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="describtion" type="Label" parent="Panel" unique_id=1172837448]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 40.0
+offset_right = 212.0
+offset_bottom = 144.0
+theme_override_font_sizes/font_size = 12
+autowrap_mode = 3
+
+[node name="ness" type="Label" parent="Panel" unique_id=771856087]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 146.0
+offset_right = 144.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 14
+text = "필요 재화:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="itemList" type="RichTextLabel" parent="Panel" unique_id=1096048552]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 165.0
+offset_right = 216.0
+offset_bottom = 324.0
+bbcode_enabled = true
+horizontal_alignment = 1

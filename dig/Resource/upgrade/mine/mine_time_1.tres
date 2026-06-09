@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://b1gfqa7ii0g3e"]
+
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_4ukty"]
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="1_o810h"]
+
+[resource]
+script = ExtResource("1_o810h")
+id = "mine_time_1"
+title = "오후 운영"
+description = "추가 운영 시간을 15초로 늘립니다."
+icon = ExtResource("1_4ukty")
+cost = 3000
+old_log = 10
+prerequisites = Array[String](["start"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

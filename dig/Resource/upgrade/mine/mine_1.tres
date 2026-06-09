@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://x8n8y7wwwaiy"]
+
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="1_5nfmh"]
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_vpo80"]
+
+[resource]
+script = ExtResource("1_5nfmh")
+id = "mine_1"
+title = "기초 발굴 도구"
+description = "유물을 파괴하였을 때 2회 방지해줍니다."
+icon = ExtResource("1_vpo80")
+cost = 1500
+old_log = 10
+prerequisites = Array[String](["start"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

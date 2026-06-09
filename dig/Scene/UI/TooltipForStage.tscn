@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dxmxjtubdcg5m"]
+
+[ext_resource type="Script" uid="uid://begh1u4rft2mh" path="res://Script/panel.gd" id="1_o02h4"]
+
+[node name="Tooltip" type="CanvasLayer" unique_id=1839333209]
+layer = 4
+
+[node name="Panel" type="Panel" parent="." unique_id=294426503]
+offset_right = 128.0
+offset_bottom = 131.0
+script = ExtResource("1_o02h4")
+
+[node name="title" type="Label" parent="Panel" unique_id=1679878899]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel" unique_id=1486601097]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 123.0
+bbcode_enabled = true
+horizontal_alignment = 1

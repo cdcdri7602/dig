@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://rchbp2s8ctbt"]
+
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_r6mva"]
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="2_ubw6y"]
+
+[resource]
+script = ExtResource("2_ubw6y")
+id = "building_3"
+title = "청동기관 개관"
+description = "발굴해서 얻은 유물로 청동기관을 개방합니다 (청동기 유물을 요구합니다)"
+icon = ExtResource("1_r6mva")
+cost = 100000
+old_log = 190
+stage_3 = true
+prerequisites = Array[String](["building_2"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

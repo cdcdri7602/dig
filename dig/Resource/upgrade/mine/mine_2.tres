@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://xnu0ftfutqe8"]
+
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_bydym"]
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="2_ksik6"]
+
+[resource]
+script = ExtResource("2_ksik6")
+id = "mine_2"
+title = "개선된 발굴 도구"
+description = "보호되는 유물수량이 5개로 증가합니다"
+icon = ExtResource("1_bydym")
+cost = 8000
+old_log = 30
+prerequisites = Array[String](["mine_1"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

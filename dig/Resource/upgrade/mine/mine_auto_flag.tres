@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://bj5irgc81g3tx"]
+
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="1_avw3n"]
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_r2w3x"]
+
+[resource]
+script = ExtResource("1_avw3n")
+id = "mine_auto_flag"
+title = "수동 유물 탐지기"
+description = "숫자칸 주변에 유물만 남아있을 시 숫자칸을 좌클릭할 시 자동으로 깃발이 배치됩니다."
+icon = ExtResource("1_r2w3x")
+cost = 5000
+old_log = 20
+prerequisites = Array[String](["start"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

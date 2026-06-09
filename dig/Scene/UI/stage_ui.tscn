@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://blmjslsyw7li8"]
+
+[ext_resource type="Script" uid="uid://cblcrw2vv66ky" path="res://Script/StageUI.gd" id="1_7jl6c"]
+[ext_resource type="Script" uid="uid://dbhw72v4y2skh" path="res://Script/stage_control.gd" id="2_d1gpu"]
+[ext_resource type="Texture2D" uid="uid://b5otco7r7etck" path="res://img/map.png" id="2_wiiov"]
+[ext_resource type="Texture2D" uid="uid://cvpw35k7t0oa4" path="res://img/gyeonggi.png" id="3_d1gpu"]
+[ext_resource type="Texture2D" uid="uid://lmtsrvrnoncw" path="res://img/white_circle.png" id="5_0vkty"]
+[ext_resource type="Texture2D" uid="uid://dkais50ecyqby" path="res://img/gyeongsang.png" id="5_3bpu1"]
+
+[node name="Control" type="Control" unique_id=1770790927]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jl6c")
+
+[node name="Control" type="Control" parent="." unique_id=1646968245]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_d1gpu")
+
+[node name="OffButton" type="Button" parent="Control" unique_id=870005842]
+layout_mode = 0
+offset_left = 1240.0
+offset_right = 1280.0
+offset_bottom = 40.0
+text = "X"
+
+[node name="BigMap" type="TextureRect" parent="Control" unique_id=1541585250]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -463.0
+offset_top = -360.0
+offset_right = 431.0
+offset_bottom = 470.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(447, 330)
+texture = ExtResource("2_wiiov")
+
+[node name="Gyeonggi" type="TextureRect" parent="Control" unique_id=2124363257]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.09166667
+anchor_right = 0.4953125
+anchor_bottom = 0.3930558
+offset_bottom = -0.00018310547
+pivot_offset = Vector2(91.5, 115)
+texture = ExtResource("3_d1gpu")
+metadata/_edit_use_anchors_ = true
+
+[node name="stage1" type="TextureRect" parent="Control/Gyeonggi" unique_id=977930630]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41935483
+anchor_top = 0.124423966
+anchor_right = 0.4946237
+anchor_bottom = 0.1889401
+texture = ExtResource("5_0vkty")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Gyeongsang" type="TextureRect" parent="Control" unique_id=2128026948]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47421876
+anchor_top = 0.33194444
+anchor_right = 0.66875
+anchor_bottom = 0.6569447
+offset_bottom = -0.00018310547
+pivot_offset = Vector2(125, 115)
+texture = ExtResource("5_3bpu1")
+metadata/_edit_use_anchors_ = true
+
+[node name="stage2" type="TextureRect" parent="Control/Gyeongsang" unique_id=43908145]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23293173
+anchor_top = 0.58547014
+anchor_right = 0.27724463
+anchor_bottom = 0.6311592
+offset_right = 2.9660873
+offset_bottom = 3.3087616
+texture = ExtResource("5_0vkty")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="stage3" type="TextureRect" parent="Control/Gyeongsang" unique_id=1989852107]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7309237
+anchor_top = 0.6495727
+anchor_right = 0.77523655
+anchor_bottom = 0.6952618
+offset_right = 2.966095
+offset_bottom = 3.3087463
+texture = ExtResource("5_0vkty")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2D" type="Line2D" parent="Control" unique_id=279272868]
+points = PackedVector2Array(687, 193, 773, 66, 1124, 66)
+
+[node name="Panel" type="Panel" parent="Control" unique_id=668168614]
+layout_mode = 0
+offset_left = 844.0
+offset_top = 71.0
+offset_right = 1125.0
+offset_bottom = 487.0
+pivot_offset = Vector2(128.5, 0)
+
+[node name="Label" type="Label" parent="Control/Panel" unique_id=1645553431]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 17.0
+offset_right = 231.0
+offset_bottom = 73.0
+text = "경기도 연천 전곡리"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Panel" unique_id=76500378]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 59.0
+offset_right = 215.0
+offset_bottom = 305.0
+text = "
+보드 크기: 25 X 25
+총 유물 갯수 100
+
+보상 아이템
+25% 달성: 낡은 목재 1개
+50% 달성: 낡은 목재 2개
+75% 달성: 낡은 목재 3개
+100% 달성: 구석기 시대 유물"
+horizontal_alignment = 1
+
+[node name="Stage1" type="Button" parent="Control/Panel" unique_id=1734072284]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 322.0
+offset_right = 229.0
+offset_bottom = 393.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "출발"
+
+[connection signal="pressed" from="Control/OffButton" to="." method="_on_off_button_pressed"]
+[connection signal="pressed" from="Control/Panel/Stage1" to="." method="_on_stage_1_pressed"]

@@ -1,0 +1,296 @@
+[gd_scene format=3 uid="uid://blpk4d3jbjddy"]
+
+[ext_resource type="Script" uid="uid://c5e5jpfx3ko36" path="res://Script/upgrade_node.gd" id="1_cxml1"]
+[ext_resource type="Script" uid="uid://cjvmwssl7amq6" path="res://Script/upgrade_tree.gd" id="1_rhoey"]
+[ext_resource type="Script" uid="uid://bpil6aj5o37go" path="res://Script/line_connect.gd" id="2_3t2ns"]
+[ext_resource type="Texture2D" uid="uid://c3s8t4q1uyl08" path="res://assets/minesc/Tile8.png" id="2_e5ds2"]
+[ext_resource type="Script" uid="uid://cbctbmg62h57b" path="res://Script/camera.gd" id="2_ejrw8"]
+[ext_resource type="Resource" uid="uid://4jwmjoy2ou0s" path="res://Resource/upgrade/UpgradeStarting.tres" id="2_m6p8q"]
+[ext_resource type="PackedScene" uid="uid://3men3wu6qfit" path="res://Scene/UI/connection_line.tscn" id="3_vhfnw"]
+[ext_resource type="Texture2D" uid="uid://1y6f20cgif1s" path="res://assets/minesc/TileEmpty.png" id="5_3t2ns"]
+[ext_resource type="PackedScene" uid="uid://qlxwa3x3hhtw" path="res://Scene/UI/tooltip.tscn" id="8_fuh88"]
+[ext_resource type="Resource" uid="uid://x8n8y7wwwaiy" path="res://Resource/upgrade/mine/mine_1.tres" id="12_p4e24"]
+[ext_resource type="Resource" uid="uid://bj5irgc81g3tx" path="res://Resource/upgrade/mine/mine_auto_flag.tres" id="13_6ispo"]
+[ext_resource type="Resource" uid="uid://xnu0ftfutqe8" path="res://Resource/upgrade/mine/mine_2.tres" id="14_4exj5"]
+[ext_resource type="Resource" uid="uid://dfrmnn8cxalpw" path="res://Resource/upgrade/mine/mine_upgrade_auto_flag.tres" id="14_l1y33"]
+[ext_resource type="Resource" uid="uid://div4gtd0nxjfh" path="res://Resource/upgrade/mine/mine_deep_excavation.tres" id="15_td5hd"]
+[ext_resource type="Resource" uid="uid://b1gfqa7ii0g3e" path="res://Resource/upgrade/mine/mine_time_1.tres" id="16_td5hd"]
+[ext_resource type="Resource" uid="uid://b6uswgvv6gle4" path="res://Resource/upgrade/mine/mine_3.tres" id="16_uyuit"]
+[ext_resource type="Resource" uid="uid://b6n5imv8tt1ix" path="res://Resource/upgrade/mine/mine_time_2.tres" id="17_td5hd"]
+[ext_resource type="Resource" uid="uid://8nkpf02vdfcp" path="res://Resource/upgrade/building/buillding_1.tres" id="18_4825r"]
+[ext_resource type="Resource" uid="uid://dyiu7xvisy7lm" path="res://Resource/upgrade/mine/mine_time_3.tres" id="18_hdc6x"]
+[ext_resource type="Resource" uid="uid://bry2gagihjsls" path="res://Resource/upgrade/building/buillding_2.tres" id="19_a5q3c"]
+[ext_resource type="Resource" uid="uid://rchbp2s8ctbt" path="res://Resource/upgrade/building/buillding_3.tres" id="20_hdc6x"]
+[ext_resource type="Texture2D" uid="uid://fhcckq71l3fi" path="res://img/key_esc.png" id="22_4uvth"]
+
+[node name="UpgradeTree" type="Control" unique_id=43973393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_rhoey")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1617483096]
+position = Vector2(640, 360)
+zoom = Vector2(1.5, 1.5)
+script = ExtResource("2_ejrw8")
+
+[node name="Control" type="Control" parent="." unique_id=898739125]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_3t2ns")
+line_scene = ExtResource("3_vhfnw")
+
+[node name="StartingNode" type="TextureButton" parent="Control" unique_id=1305281609 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -72.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_e5ds2")
+script = ExtResource("1_cxml1")
+data = ExtResource("2_m6p8q")
+tooltip = ExtResource("8_fuh88")
+
+[node name="MineAutoFlag" type="TextureButton" parent="Control" unique_id=630685794 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50299996
+anchor_top = 0.62222224
+anchor_right = 0.50299996
+anchor_bottom = 0.62222224
+offset_left = -67.839966
+offset_top = -120.0
+offset_right = -51.839966
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("13_6ispo")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="MineUpAutoFlag" type="TextureButton" parent="Control" unique_id=64963854 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49049997
+anchor_top = 0.6333333
+anchor_right = 0.49049997
+anchor_bottom = 0.6333333
+offset_left = -67.839966
+offset_top = -80.0
+offset_right = -51.839966
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("14_l1y33")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="MineDeep" type="TextureButton" parent="Control" unique_id=1055785200 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47174996
+anchor_top = 0.6333333
+anchor_right = 0.47174996
+anchor_bottom = 0.6333333
+offset_left = -67.839966
+offset_top = -40.0
+offset_right = -51.839966
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("15_td5hd")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Mine1Node" type="TextureButton" parent="Control" unique_id=1293162759 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50299996
+anchor_top = 0.62222224
+anchor_right = 0.50299996
+anchor_bottom = 0.62222224
+offset_left = -19.839966
+offset_top = -120.0
+offset_right = -3.8399658
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("12_p4e24")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Mine1Node2" type="TextureButton" parent="Control" unique_id=872404954 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4875
+anchor_top = 0.53333336
+anchor_right = 0.5
+anchor_bottom = 0.5555556
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("14_4exj5")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Mine1Node3" type="TextureButton" parent="Control" unique_id=858140173 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4875
+anchor_top = 0.6111111
+anchor_right = 0.5
+anchor_bottom = 0.6333333
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("16_uyuit")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Minetime" type="TextureButton" parent="Control" unique_id=1826748471 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5405
+anchor_top = 0.62222224
+anchor_right = 0.5405
+anchor_bottom = 0.62222224
+offset_left = -19.839966
+offset_top = -120.0
+offset_right = -3.8399658
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("16_td5hd")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Minetime2" type="TextureButton" parent="Control" unique_id=829737356 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.55925
+anchor_top = 0.6888889
+anchor_right = 0.55925
+anchor_bottom = 0.6888889
+offset_left = -19.839966
+offset_top = -120.0
+offset_right = -3.8399658
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("17_td5hd")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Minetime3" type="TextureButton" parent="Control" unique_id=90291728 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.57799995
+anchor_top = 0.74444443
+anchor_right = 0.57799995
+anchor_bottom = 0.74444443
+offset_left = -19.839966
+offset_top = -120.0
+offset_right = -3.8399658
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("18_hdc6x")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="BuildUpgrade1" type="TextureButton" parent="Control" unique_id=1885402101 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5405
+anchor_top = 0.51111114
+anchor_right = 0.5405
+anchor_bottom = 0.51111114
+offset_left = -67.839966
+offset_top = -120.0
+offset_right = -51.839966
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("18_4825r")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="BuildUpgrade2" type="TextureButton" parent="Control" unique_id=1883262689 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4875
+anchor_top = 0.2888889
+anchor_right = 0.5
+anchor_bottom = 0.31111112
+offset_top = -1.5258789e-05
+offset_bottom = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("19_a5q3c")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="BuildUpgrade3" type="TextureButton" parent="Control" unique_id=788752297 groups=["upgrade_nodes"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4875
+anchor_top = 0.23333335
+anchor_right = 0.5
+anchor_bottom = 0.25555557
+offset_top = -1.5258789e-05
+offset_bottom = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_3t2ns")
+script = ExtResource("1_cxml1")
+data = ExtResource("20_hdc6x")
+tooltip = ExtResource("8_fuh88")
+metadata/_edit_use_anchors_ = true
+
+[node name="KeyEsc" type="Sprite2D" parent="." unique_id=910070478]
+position = Vector2(248.00002, 576)
+scale = Vector2(0.41666666, 0.41666666)
+texture = ExtResource("22_4uvth")
+
+[node name="Label" type="Label" parent="." unique_id=2095401334]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 560.0
+offset_right = 312.0
+offset_bottom = 583.0
+text = "창 닫기"

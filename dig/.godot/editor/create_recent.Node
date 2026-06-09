@@ -1,0 +1,14 @@
+AudioStreamPlayer
+Label
+Control
+TextureRect
+AudioStreamPlayer2D
+CollisionShape2D
+Area2D
+ColorRect
+RichTextLabel
+CanvasLayer
+Camera2D
+SubViewport
+SubViewportContainer
+PointLight2D

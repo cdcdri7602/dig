@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://dfrmnn8cxalpw"]
+
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="1_l4to6"]
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_q1alv"]
+
+[resource]
+script = ExtResource("1_l4to6")
+id = "mine_upgrade_auto_flag"
+title = "자동 유물 탐지기"
+description = "유물의 위치가 확정될 시 자동으로 유물을 참지해줍니다"
+icon = ExtResource("1_q1alv")
+cost = 25000
+old_log = 60
+prerequisites = Array[String](["mine_auto_flag"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

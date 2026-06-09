@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" format=3 uid="uid://div4gtd0nxjfh"]
+
+[ext_resource type="Texture2D" uid="uid://kdp3vqf3spsa" path="res://assets/minesc/TileUnknown.png" id="1_7kj5q"]
+[ext_resource type="Script" uid="uid://ir4d43rnxygk" path="res://Resource/upgrade_data.gd" id="2_xesob"]
+
+[resource]
+script = ExtResource("2_xesob")
+id = "mine_deep_excavation"
+title = "탐지 범위 확장기"
+description = "처음 클릭했을 때 보여지는 숫자칸에 인접한 숫자칸을 자동으로 개방합니다"
+icon = ExtResource("1_7kj5q")
+cost = 60000
+old_log = 120
+prerequisites = Array[String](["mine_upgrade_auto_flag"])
+metadata/_custom_type_script = "uid://ir4d43rnxygk"

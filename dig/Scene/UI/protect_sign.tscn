@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5e8hsvf346fb"]
+
+[ext_resource type="Script" uid="uid://crecg4q7oou02" path="res://Script/protect_sign.gd" id="1_wxuwt"]
+
+[node name="ProtectSign" type="Label" unique_id=1042038433]
+offset_right = 14.0
+offset_bottom = 7.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "보호됨!"
+script = ExtResource("1_wxuwt")
